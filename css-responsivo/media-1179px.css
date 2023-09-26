@@ -1,0 +1,16 @@
+@media (max-width: 1179px) and (min-width: 1000px){
+  .card-img{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-img div{
+    display: flex;
+  }
+  .card-img-reverse{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-img-reverse div{
+    display: flex;
+  }
+}

@@ -1,0 +1,79 @@
+@media (max-width: 426px){
+  .vantagens h2{
+    font-size: 30px;
+  }
+  .vantagens a{
+    font-size: 12px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  .caixa_maior{
+    background-size: 340px;
+  }
+  footer{
+    
+    background-image: url(../img/SITERESPONSIVO.png);
+    background-size: 100%;
+    
+  }
+
+  #contato{
+    margin-left: 0px;
+    margin-bottom: 100px;
+  }
+
+  #backtotop-btn {
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .rocket {
+    margin-bottom: 8px;
+    margin-right: 8px;
+  }
+
+  .perguntas-frequentes{
+    height: auto;
+  }
+
+  .caixa2{
+    width: 90%;
+    margin-left: 10px;
+  }
+
+  .divisoria-laranja p{
+      font-size: 36px;
+  }
+  .lab{
+    font-size: 36px;
+  }
+  .identificador p{
+    font-size: 38px;
+  }
+  .vant-txt{
+    font-size: 10px;
+
+  }
+  
+  .quadrado1{
+    width: 70%;
+  }
+
+  .quadrado2{
+    width: 70%;
+  }
+
+  .quadrado3{
+    width: 70%;
+  }
+  
+  .desc-cl{
+  font-size: 15px;
+  }
+
+  .comosurgiu-txt{
+    font-size: 16px;
+  }
+}
+  

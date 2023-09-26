@@ -1,0 +1,25 @@
+@media (max-width: 765px){
+  .sobre-conteudo{
+    flex-direction: column;
+  }
+  .img-cont{
+    transform: rotate(-90deg);
+    width: 80%;
+  }
+  .sobre-conteudo > p{
+    font-size: 20px;
+    width: 90%;
+    margin: 15px;
+    
+  }
+  .caixa_maior{
+      width: 100%;
+  }
+
+  .vant-txt{
+    margin: 10px;
+  }
+  .rocket-txt{
+    display: none;
+}
+}

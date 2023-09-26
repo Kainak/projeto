@@ -1,0 +1,49 @@
+@media (max-width: 640px){
+  .quadrado1{
+    width: 70%;
+  }
+
+  .quadrado2{
+    width: 70%;
+  }
+
+  .quadrado3{
+    width: 70%;
+  }
+  .caixa2{
+    width: 90%;
+    
+  }
+  .vant-txt{
+    margin: 10px
+  }
+    footer{
+        height: 1500px;
+        background-image: url(../img/SITERESPONSIVO.png);
+        background-size: 100%;
+        justify-content: center;
+        align-items: center;
+        
+      }
+  
+      #contato{
+        margin-left: 0px;
+        margin-bottom: 50px;
+      }
+  
+      #backtotop-btn {
+        right: 5px;
+        bottom: 5px;
+      }
+  
+      .rocket {
+        margin-bottom: 8px;
+        margin-right: 8px;
+      }
+  
+      .perguntas-frequentes{
+        margin-right: 0px;
+        margin-bottom: 300px;
+      }
+      
+}

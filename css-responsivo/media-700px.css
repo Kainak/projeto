@@ -1,0 +1,66 @@
+@media (max-width: 700px){
+    .footercont{
+    height: auto;
+    justify-content: space-around;
+    align-items: top; 
+    }
+    
+    #contato{
+        width: 270px;
+        height: 450px;
+        display: flex;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    
+    #contato p{
+        font-size: medium;
+    }
+    
+
+    .perguntas-frequentes{
+        width: 300px;
+        height: fit-content;
+        margin: 0;
+    }
+    
+    .perguntas-frequentes p{
+        font-size: medium;
+    }
+    
+    form{
+        margin: 8px;
+        height: 350px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+        margin-bottom: 50px;
+    
+    }
+    
+    .campo-form{
+        width: 100%;
+    
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        align-items: left;
+    }
+    
+    .botao-enviar{
+        margin: 8px;
+        border-radius: 20px;
+        height: 35px;
+        width: 90px;
+    
+    }
+    
+    .frequente{
+        margin: 10px;
+        height: auto;
+        width: fit-content;
+
+    }
+}
