@@ -5,14 +5,30 @@ const noticiaDiv = document.querySelector(".noticia");
 fetch(URL, {
     method: "GET",
 })
-    .then(result=> result.json())
+    .then(response => response.json())
     .then(result => {
-        console.log (result)
         result.result.forEach(noticia => {
-        
             var tituloElement = document.createElement("p");
-            tituloElement.innerText = "noticiasanity core add.titulo";
+            tituloElement.classList.add("titulo"); 
+            tituloElement.textContent = noticia.titulo;
+            
+            var subtituloElement = document.createElement("p");
+            subtituloElement.classList.add("subtitulo"); 
+            subtituloElement.textContent = noticia.subtitulo;
+            
+            var conteudoElement = document.createElement("p");
+            conteudoElement.classList.add("descricao"); 
+            conteudoElement.textContent = noticia.conteudo;
+
+            var imagemElement = document.createElement("img");
+            imagemElement.classList.add("img-noticia"); 
+            imagemElement.src = noticia.imagem; 
+            imagemElement.alt = noticia.titulo;
+            
             noticiaDiv.appendChild(tituloElement);
+            noticiaDiv.appendChild(subtituloElement);
+            noticiaDiv.appendChild(conteudoElement);
+            noticiaDiv.appendChild(imagemElement);
         })
     })
 
