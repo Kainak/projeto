@@ -416,8 +416,17 @@ p{
     align-items: center;
     width: 35%;
     /* border: solid 1px white; */
-
 }
+
+.caixa_fundo1{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    /* border: solid 1px white; */
+}
+
 .identificador{
     background-color: #FC6335;
     filter: drop-shadow(3px 6px 4px rgba(0, 0, 0, 0.25));
@@ -716,3 +725,5 @@ form{
         opacity: 0;
     }
 }
+
+ 
