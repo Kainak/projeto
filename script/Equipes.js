@@ -1,6 +1,6 @@
 const URL = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22equipe%22%5D&perspective=published";
 
-const dataApiElement = document.getElementById("dataApi");
+const profs = document.getElementById("sep");
 
 fetch(URL, {
     method: "GET",
@@ -11,29 +11,18 @@ fetch(URL, {
         console.log(data)
         data.result.forEach(element => {
             console.log(element);
-            var txtDiv = document.createElement("div");
-            txtDiv.classList.add("txt");
+            var profsDiv = document.createElement("div")
+            profsDiv.classList.add("profs");
+            profs.appendChild(profsDiv);
 
-            dataApiElement.appendChild(txtDiv);
-
-            var tituloElement = document.createElement("p");
-            tituloElement.classList.add("nome");
-            tituloElement.innerText = element.nome; 
-            txtDiv.appendChild(tituloElement);
-
-            var tituloElement = document.createElement("p");
-            tituloElement.classList.add("cargo");
-            tituloElement.innerText = element.cargo; 
-            txtDiv.appendChild(tituloElement);
-
-            var pictureTag = document.createElement("picture");
-            dataApiElement.appendChild(pictureTag);
+            var ImgTag = document.createElement("img");
+            profs.appendChild(ImgTag);
             var sourceElement = document.createElement('source');
             sourceElement.setAttribute('media', '(max-width: 500px)');
             if(element.imagem){
                 sourceElement.setAttribute('srcset', element.imagem.asset._ref);
             }
-            pictureTag.appendChild(sourceElement);
+            ImgTag.appendChild(sourceElement);
 
             var imgElement = document.createElement("img");
             imgElement.classList.add("img-Equipe");
@@ -41,6 +30,17 @@ fetch(URL, {
                 imgElement.src = element.imagem.asset._ref;
             }
             pictureTag.appendChild(imgElement);
+
+            var tituloElement = document.createElement("p");
+            tituloElement.classList.add("nome");
+            tituloElement.innerText = element.nome; 
+            profsDiv.appendChild(tituloElement);
+
+            var tituloElement = document.createElement("p");
+            tituloElement.classList.add("cargo");
+            tituloElement.innerText = element.cargo; 
+            profsDiv.appendChild(tituloElement);
+
           
         })
         

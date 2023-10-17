@@ -80,6 +80,17 @@
   tituloElement.classList.add("cargo");
   tituloElement.innerText = equipes.cargo; 
   txtDiv.appendChild(tituloElement);
+
+  var PictureTag = document.createElement("picture");
+  equipes.appendChild(PictureTag);
+  var sourceElement = document.createElement('source');
+  sourceElement.setAttribute('media', '(max-width: 500px)');
+  sourceElement.setAttribute('srcset', equipes.imagemresp);
+  PictureTag.appendChild(sourceElement);
+  var ImgElement = document.createElement("img");
+  ImgElement.classList.add("img-equipes");
+  ImgElement.src = equipes.imagem;
+  PictureTag.appendChild(ImgElement);
 </script>
 
 
