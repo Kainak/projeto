@@ -1,44 +1,47 @@
 const URL = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22equipe%22%5D&perspective=published";
 
-const EquipeDiv = document.querySelector(".equipe");
+const dataApiElement = document.getElementById("dataApi");
 
 fetch(URL, {
     method: "GET",
 })
-    .then(result => result.json())
+    .then(response => response.json())
     
-    .then(result => {
-        
-        result.result.forEach(Equipe => {
-            console.log(result);
+    .then(data => {
+        console.log(data)
+        data.result.forEach(element => {
+            console.log(element);
             var txtDiv = document.createElement("div");
             txtDiv.classList.add("txt");
 
-            EquipeDiv.appendChild(txtDiv);
+            dataApiElement.appendChild(txtDiv);
 
             var tituloElement = document.createElement("p");
-            tituloElement.classList.add("Nome");
-            tituloElement.innerText = Equipe.Nome; 
+            tituloElement.classList.add("nome");
+            tituloElement.innerText = 'Nome: ' + element.nome; 
             txtDiv.appendChild(tituloElement);
-            
-            var tituloElement = document.createElement("p");
-            tituloElement.classList.add("Cargo");
-            tituloElement.innerText = Equipe.Cargo; 
-            txtDiv.appendChild(tituloElement);        
 
-            var PictureTag = document.createElement("picture");
-            EquipeDiv.appendChild(PictureTag);
+            var tituloElement = document.createElement("p");
+            tituloElement.classList.add("cargo");
+            tituloElement.innerText = 'Cargo: '+element.cargo; 
+            txtDiv.appendChild(tituloElement);
+
+            var pictureTag = document.createElement("picture");
+            dataApiElement.appendChild(pictureTag);
             var sourceElement = document.createElement('source');
             sourceElement.setAttribute('media', '(max-width: 500px)');
-            sourceElement.setAttribute('srcset', Equipe.imagemresponsiva);
-            PictureTag.appendChild(sourceElement);
-            var ImgElement = document.createElement("img");
-            ImgElement.classList.add("img-Equipe");
-            ImgElement.src = Equipe.imagem;
-            PictureTag.appendChild(ImgElement);
+            if(element.imagem){
+                sourceElement.setAttribute('srcset', element.imagem.asset._ref);
+            }
+            pictureTag.appendChild(sourceElement);
+
+            var imgElement = document.createElement("img");
+            imgElement.classList.add("img-Equipe");
+            if(element.imagem){
+                imgElement.src = element.imagem.asset._ref;
+            }
+            pictureTag.appendChild(imgElement);
           
         })
         
     });
-
-
