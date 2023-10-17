@@ -18,12 +18,12 @@ fetch(URL, {
 
             var tituloElement = document.createElement("p");
             tituloElement.classList.add("nome");
-            tituloElement.innerText = 'Nome: ' + element.nome; 
+            tituloElement.innerText = element.nome; 
             txtDiv.appendChild(tituloElement);
 
             var tituloElement = document.createElement("p");
             tituloElement.classList.add("cargo");
-            tituloElement.innerText = 'Cargo: '+element.cargo; 
+            tituloElement.innerText = element.cargo; 
             txtDiv.appendChild(tituloElement);
 
             var pictureTag = document.createElement("picture");
