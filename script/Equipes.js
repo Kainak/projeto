@@ -10,7 +10,7 @@ fetch(URL, {
     .then(data => {
         console.log(data)
         data.result.forEach(element => {
-            console.log(element);
+    
             var profsDiv = document.createElement("div")
             profsDiv.classList.add("profs");
             profs.appendChild(profsDiv);
@@ -20,13 +20,17 @@ fetch(URL, {
             ImgTag.src= element.imagem;
             profsDiv.appendChild(ImgTag);
 
+            var divNome = document.createElement('div');
+            divNome.setAttribute("id", "nome");
+            profsDiv.appendChild(divNome);
+
             var nometag = document.createElement('h3');
             nometag.textContent = element.nome;
-            profsDiv.appendChild(nometag);
+            divNome.appendChild(nometag);
 
             var cargotag = document.createElement('p');
             cargotag.textContent = element.cargo;
-            profsDiv.appendChild(cargotag);
+            divNome.appendChild(cargotag);
 
 
         })
