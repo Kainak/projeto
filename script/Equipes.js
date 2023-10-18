@@ -20,7 +20,15 @@ fetch(URL, {
             ImgTag.src= element.imagem;
             profsDiv.appendChild(ImgTag);
 
-          
+            var nometag = document.createElement('h3');
+            nometag.textContent = element.nome;
+            profsDiv.appendChild(nometag);
+
+            var cargotag = document.createElement('p');
+            cargotag.textContent = element.cargo;
+            profsDiv.appendChild(cargotag);
+
+
         })
         
     });
