@@ -647,6 +647,7 @@ form{
 }
 
 #backtotop-btn {
+    
     visibility: hidden;
     position: fixed;
     cursor: pointer;
@@ -654,20 +655,20 @@ form{
     bottom: 16px;
     user-select: none;
     transition: 1s;
-    
+
   }
 
   .rocket {
     display: block;
     font-size: 50px;
-    transform: rotate(315deg);
+    /* transform: rotate(315deg); */
     margin-bottom: 20px;
     margin-right: 0px;
     
 }
 .rocket-txt{
     display: flex;
-    margin-left: -30px;
+    margin-left: -45px;
 }
 .slide-in-bottom {
     -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

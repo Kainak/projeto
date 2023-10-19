@@ -8,6 +8,7 @@ fetch(URL, {
     .then(result => result.json())
     
     .then(result => {
+        
         console.log(result);
 
         result.result.forEach(preclube => { 
