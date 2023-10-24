@@ -19,7 +19,7 @@ fetch(URL_PRE, {
         preClubediv.appendChild(novaImagem);
 
      
-
+        divTextoVantagens.style.paddingBottom = "15px";
         var titulo = document.createElement("h3");
         titulo.innerText = "Descrição";
         
@@ -51,11 +51,12 @@ fetch(URL_PRE, {
       idadePreDiv.appendChild(ageElement);
       idadePreDiv.style.backgroundColor = "#FF6437";
 
-      idadePreDiv.style.borderRadius = "7px 7px 0 0";
+      idadePreDiv.style.borderRadius = "7px 7px 7px 7px";
       idadePreDiv.style.fontWeight = "bold";
       idadePreDiv.style.textAlign= "center";
       idadePreDiv.style.border = "0.5px #fff solid";
       idadePreDiv.style.color = "#fff";
+      idadePreDiv.style.overflow = "hidden";
       ageElement.style.margin = "5px 0 0 0";
 
         })  
@@ -125,8 +126,7 @@ fetch(URL_PRE, {
             
               horariosDiv.appendChild(table);
             
-              table.style.borderRadius = "0px 0px 7px 7px";
-              table.style.overflow = "hidden";
+
               table.style.fontSize = "20px";
               table.style.fontWeight = "bold";
             
