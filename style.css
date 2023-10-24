@@ -651,7 +651,7 @@ form{
     visibility: hidden;
     position: fixed;
     cursor: pointer;
-    right: 16px;
+    right: 20px;
     bottom: 16px;
     user-select: none;
     transition: 1s;
@@ -660,11 +660,15 @@ form{
 
   .rocket {
     display: block;
-    font-size: 50px;
+    font-size: 10px;
     /* transform: rotate(315deg); */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-right: 0px;
     
+}
+
+.rocket img {
+    max-width: 70px;
 }
 .rocket-txt{
     display: flex;
