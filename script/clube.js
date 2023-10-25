@@ -35,7 +35,7 @@ fetch(URL_CLUBE, {
       secondElement.appendChild(divElement);
       divElement.appendChild(titleElement);
       divElement.appendChild(textElement);
-
+      secondElement.style.paddingBottom = "15px";
       secondElement.appendChild(div_2_Element);
 
       divElement.appendChild(idadeDiv);
@@ -46,8 +46,7 @@ fetch(URL_CLUBE, {
 
       idadeDiv.style.backgroundColor = "#FF6437";
       idadeDiv.style.textAlign = "center";
-      idadeDiv.style.padding = "3px 145px";
-      idadeDiv.style.borderRadius = "7px 7px 0 0";
+      idadeDiv.style.borderRadius = "7px 7px 7px 7px";
       idadeDiv.style.fontWeight = "bold";
       idadeDiv.style.border = "0.5px #fff solid";
       idadeDiv.style.color = "#fff";
@@ -63,7 +62,7 @@ fetch(URL_CLUBE, {
         console.log(result);
         result.result.forEach((horarios) => {
           var horariosDiv = document.createElement("div");
-          div_2_Element.appendChild(horariosDiv);
+          idadeDiv.appendChild(horariosDiv);
 
           var table = document.createElement("table");
           table.classList.add("table_horario");
