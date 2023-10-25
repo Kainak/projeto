@@ -416,8 +416,17 @@ p{
     align-items: center;
     width: 35%;
     /* border: solid 1px white; */
-
 }
+
+.caixa_fundo1{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    /* border: solid 1px white; */
+}
+
 .identificador{
     background-color: #FC6335;
     filter: drop-shadow(3px 6px 4px rgba(0, 0, 0, 0.25));
@@ -638,27 +647,32 @@ form{
 }
 
 #backtotop-btn {
+    
     visibility: hidden;
     position: fixed;
     cursor: pointer;
-    right: 16px;
+    right: 20px;
     bottom: 16px;
     user-select: none;
     transition: 1s;
-    
+
   }
 
   .rocket {
     display: block;
-    font-size: 50px;
-    transform: rotate(315deg);
-    margin-bottom: 20px;
+    font-size: 10px;
+    /* transform: rotate(315deg); */
+    margin-bottom: 10px;
     margin-right: 0px;
     
 }
+
+.rocket img {
+    max-width: 70px;
+}
 .rocket-txt{
     display: flex;
-    margin-left: -30px;
+    margin-left: -45px;
 }
 .slide-in-bottom {
     -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -716,3 +730,5 @@ form{
         opacity: 0;
     }
 }
+
+ 
