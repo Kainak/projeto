@@ -6,14 +6,13 @@ fetch(URL, {
     method: "GET",
 })
     .then(result => result.json())
-    
+
     .then(result => {
         
         result.result.forEach(noticia => {
-        
+
             var txtDiv = document.createElement("div");
             txtDiv.classList.add("txt");
-
             noticiaDiv.appendChild(txtDiv);
 
             var tituloElement = document.createElement("p");
