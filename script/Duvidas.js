@@ -1,31 +1,40 @@
-const URL = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22duvidas%22%5D&perspective=published";
+const duvidaURL = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22duvidas%22%5D%0A%0A++&perspective=published";
 
-const DuvidasDiv = document.querySelector(".Duvidas");
+const duvidasDiv = document.querySelector(".frequente");
 
-fetch(URL, {
+fetch(duvidaURL, {
     method: "GET",
 })
     .then(result => result.json())
+    
     .then(result => {
-        result.result.forEach(QA => {
-            var txtDiv = document.createElement("div");
-            txtDiv.classList.add("txt");
 
-            DuvidasDiv.appendChild(txtDiv);
+        console.log(result);
 
-            var perguntaElement = document.createElement("p");
-            perguntaElement.classList.add("Pergunta");
-            perguntaElement.innerText = QA.Pergunta;
-            txtDiv.appendChild(perguntaElement);
+        result.result.forEach((duvidas, index) => {
+            const p = document.createElement("p");
+            var button = document.createElement("button");
+            button.className = "campo-freq";
+            button.setAttribute("type", "button");
+            button.setAttribute("data-bs-toggle", "collapse");
+            //index atribuido aos atributos para não repetir todos quando clica o botão
+            button.setAttribute("data-bs-target", `#collapseExample${index}`);
+            button.setAttribute("aria-expanded", "false");
+            button.setAttribute("aria-controls", `collapseExample${index}`);
+            button.textContent = duvidas.pergunta;
+            p.appendChild(button);
+            duvidasDiv.appendChild(p);
 
-            var respostaElement = document.createElement("p");
-            respostaElement.classList.add("Resposta");
-            respostaElement.innerText = QA.Resposta;
-            txtDiv.appendChild(respostaElement);
-        });
+            var resposta = document.createElement("div");
+            resposta.className = "collapse";
+            resposta.setAttribute("id", `collapseExample${index}`);
+
+            var resp = document.createElement("div");
+            resp.classList.add("card", "card-body");
+            resp.textContent = duvidas.resposta;
+
+            resposta.appendChild(resp);
+            duvidasDiv.appendChild(resposta);
+        })
+
     })
-    .catch(error => {
-        console.error(error);
-    });
-
-
