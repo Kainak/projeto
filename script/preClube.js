@@ -1,5 +1,5 @@
 const URL_PRE = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22preClube%22%5D%7B%0A++%22id%22%3A_id%2C%0A++%22imagem%22%3A+imagem.asset-%3Eurl%2C%0A++descricao%2C%0A++faixaDeIdade%2C%0A++data%0A%7D%0A+%0A%0A%0A++&perspective=published";
-const URL_HORARIOS_PRE = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22horarios_pre_clube%22%5D%7B%0A++turnoManha%2C%0A++++turnoTarde%2C%0A++++diasDaSemana%2C%0A++++turmas%0A%7D&perspective=published";
+const URL_HORARIOS_PRE = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22horarios_pre_clube%22%5D%0A+%0A&perspective=published";
 const preClubediv = document.querySelector(".caixa_maior_baixo");
 var divTextoVantagens =  document.createElement('div');
 divTextoVantagens.classList.add("caixa_texto_vantagens");
@@ -56,7 +56,9 @@ fetch(URL_PRE, {
       idadePreDiv.style.textAlign= "center";
       idadePreDiv.style.border = "0.5px #fff solid";
       idadePreDiv.style.color = "#fff";
+      idadePreDiv.style.maxWidth = "560px";
       ageElement.style.margin = "5px 0 0 0";
+      
 
         })  
     })
@@ -102,7 +104,7 @@ fetch(URL_PRE, {
               td3_1.classList.add("borda_td_bottom");
               td3_1.innerText = horarios.diasDaSemana[0];
               td3_2.classList.add("borda_td_bottom");
-              td3_2.innerText = horarios.turmas.turmaA;
+              td3_2.innerText = horarios.turma[0];
               tr3.appendChild(td3_1);
               tr3.appendChild(td3_2);
             
@@ -112,7 +114,7 @@ fetch(URL_PRE, {
               td4_1.classList.add("borda_td_bottom");
               td4_1.innerText = horarios.diasDaSemana[1];
               td4_2.classList.add("borda_td_bottom");
-              td4_2.innerText = horarios.turmas.turmaB;
+              td4_2.innerText = horarios.turma[1];
               tr4.appendChild(td4_1);
               tr4.appendChild(td4_2);
             
@@ -147,7 +149,7 @@ fetch(URL_PRE, {
                 borda.style.color = "#003675";
               });
             
-              // Ajusta o tamanho da fonte das células específicas
+              // Ajusta o tamanho da fonte
               td1_1.style.fontSize = "16px";
               td2_1.style.fontSize = "16px";
               td3_1.style.fontSize = "16px";
