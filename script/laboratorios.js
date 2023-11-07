@@ -1,8 +1,8 @@
-const URL = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22laboratorios%22%5D%7B%0A++++titulo%2C%0A++++descricao%2C%0A++++ordem%2C%0A++++%22imagemGrande%22%3A+imgGrande.asset-%3Eurl%2C%0A++++%22imagemGrandeResponsiva1%22%3A+imgGrandeResponsiva1.asset-%3Eurl%2C%0A++++%22imagemGrandeResponsiva2%22%3A+imgGrandeResponsiva2.asset-%3Eurl%2C%0A++++%22imagemPequena1%22%3A+imgPequena1.asset-%3Eurl%2C%0A++++%22imagemPequena2%22%3A+imgPequena2.asset-%3Eurl%0A%7D+%7C+order%28ordem%29%0A%0A&perspective=published";
+const URLlab = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22laboratorios%22%5D%7B%0A++++titulo%2C%0A++++descricao%2C%0A++++ordem%2C%0A++++%22imagemGrande%22%3A+imgGrande.asset-%3Eurl%2C%0A++++%22imagemGrandeResponsiva1%22%3A+imgGrandeResponsiva1.asset-%3Eurl%2C%0A++++%22imagemGrandeResponsiva2%22%3A+imgGrandeResponsiva2.asset-%3Eurl%2C%0A++++%22imagemPequena1%22%3A+imgPequena1.asset-%3Eurl%2C%0A++++%22imagemPequena2%22%3A+imgPequena2.asset-%3Eurl%0A%7D+%7C+order%28ordem%29%0A%0A&perspective=published";
 
 const cardsDiv = document.querySelector(".cards");
 
-fetch(URL, {
+fetch(URLlab, {
     method: "GET",
 })
     .then(response => response.json())

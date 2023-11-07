@@ -237,6 +237,7 @@ p{
 .card{
     display: flex;
     flex-direction: row;
+    width: 80%;
     height: auto;
     border-radius: 20px;
     background-color: #103973;
