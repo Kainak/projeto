@@ -1,9 +1,9 @@
-function fetchPremios() {
+function fetchListaPremios() {
     const URL = "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=%0A*%5B_type%3D%3D%22listaDePremios%22%5D%7B%0A++ordem%2C%0A++%22imagem%22%3A+imagem.asset-%3Eurl%2C%0A++++descricao%0A%7D%7C+order%28ordem%29%0A&perspective=published";
     
     const premioDiv = document.querySelector(".div-premios");
     
-    fetch(URLlista, {
+    fetch(URL, {
         method: "GET",
     })
         .then(result => result.json())
@@ -25,4 +25,4 @@ function fetchPremios() {
         });
     }
     
-    fetchPremios();
+    fetchListaPremios();
