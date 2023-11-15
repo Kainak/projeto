@@ -60,7 +60,7 @@ fetch(URL_CLUBE, {
     })
       .then((result) => result.json())
       .then((result) => {
-        console.log(result);
+     
         result.result.forEach((horarios) => {
           var horariosDiv = document.createElement("div");
           idadeDiv.appendChild(horariosDiv);

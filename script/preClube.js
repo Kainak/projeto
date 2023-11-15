@@ -11,7 +11,7 @@ fetch(URL_PRE, {
     .then(result => result.json())
     
     .then(result => {
-        console.log(result);
+        
         result.result.forEach(preclube => { 
 
         var novaImagem = document.createElement('img');
@@ -68,7 +68,7 @@ fetch(URL_PRE, {
         })
           .then(result => result.json())
           .then(result => {
-            console.log(result);
+         
             result.result.forEach(horarios => {
               var horariosDiv = document.createElement("div");
               idadePreDiv.appendChild(horariosDiv);
