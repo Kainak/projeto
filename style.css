@@ -655,6 +655,7 @@ form{
     bottom: 16px;
     user-select: none;
     transition: 1s;
+    z-index: 9999;
     
   }
 
