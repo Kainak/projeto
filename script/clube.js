@@ -1,7 +1,6 @@
-const URL_CLUBE =
+function fetchClube() {
+const URL =
   "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22clube%22%5D%7B%0A++%22imagem%22%3A+imagem.asset-%3Eurl%2C%0A++descricao%2C%0A++faixaDeIdade%2C%0A%7D&perspective=published";
-const URL_HORARIOS_CLUBE =
-  "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22horarios_clube%22%5D%0A+%0A&perspective=published";
 
 const caixaDiv = document.querySelectorAll(".caixa_maior_baixo");
 var secondElement = caixaDiv[1];
@@ -21,7 +20,7 @@ div_2_Element.classList.add("caixa_texto_vantagens");
 
 titleElement.innerText = "Descrição";
 
-fetch(URL_CLUBE, {
+fetch(URL, {
   method: "GET",
 })
   .then((result) => result.json())
@@ -55,7 +54,10 @@ fetch(URL_CLUBE, {
     });
   })
   .then(() => {
-    fetch(URL_HORARIOS_CLUBE, {
+    const URL =
+  "https://7ecl58ro.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%3D%3D%22horarios_clube%22%5D%0A+%0A&perspective=published";
+
+    fetch(URL, {
       method: "GET",
     })
       .then((result) => result.json())
@@ -177,3 +179,6 @@ fetch(URL_CLUBE, {
         });
       });
   });
+}
+
+fetchClube();
